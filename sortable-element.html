@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        li {
+            margin: 0 2px 2px 2px;
+            padding: 2px;
+            font-size: 1.2em;
+            width: 120px;
+            border: 1px solid black;
+            background: #FFF;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main_container">
+        <ul id="sortable1" class="connectedSortable ui-helper-reset">
+            <li class="ui-state-default">A</li>
+            <li class="ui-state-default">B</li>
+            <li class="ui-state-default">C</li>
+            <li class="ui-state-default">D</li>
+        </ul>
+    </div>
+    <script>
+        $("#sortable1").sortable({
+                stop: function (event, ui) {
+                    ui.item.attr("style", "");
+                }
+            });
+    </script>
+</body>
+</html>

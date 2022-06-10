@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Open Sans,Roboto,Arial,Helvetica,sans-serif,SimSun;
+            background-color: #f2f2f2;
+        }
+        *, :after, :before {
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 991px){
+            .product-detail {
+                max-width: 784px;
+                width: 100%;
+            }
+        }
+            
+        .product-detail .product-detail-tab {
+            max-width: 984px;
+            margin-bottom: 16px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .detail-extend-tab {
+            max-width: 984px;
+            width: 100%;
+        }
+        .detail-tab-bar .tab-lists{
+            border-bottom:1px solid #d8d8d8;
+            height:44px
+        }
+        .detail-tab-bar .tab-item{
+            display:inline-block;
+            cursor:pointer;
+        }
+        .detail-tab-bar .tab-inner-text{
+            position:relative;
+        }
+        .detail-tab-bar .tab-item .tab-inner-text:after{
+            content:"";
+            position:absolute;
+            left:0;
+            display:inline-block;
+            width:50%;
+        }
+        .detail-tab-bar .tab-item.active .tab-inner-text:after{
+            content:"";
+            position:absolute;
+            left:50%;
+            top:27px;
+            -ms-transform:translate(-50%);
+            transform:translate(-50%);
+            transition: width .4s;
+            display:inline-block;
+            border-bottom:4px solid #000;
+            padding-left:16px;
+            padding-right:16px;
+            width:100%;
+        }
+        .detail-tab-bar .tab-inner{
+            display:inline-block;
+            padding:14px 16px 12px;
+            font-size:14px;
+        }
+        .detail-tab-bar .active{
+            font-weight:700;
+        }
+        .detail-tab-bar .report-item{
+            float:right;
+            font-size:12px;
+        }
+        .detail-tab-bar .report-item a{
+            color:#000;
+        }
+        .detail-tab-bar .report-item a:hover{
+            color:#ff4747;
+        }
+        .avoid-user-select {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .detail-extend-tab .tab-content {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        .product-overview{
+            background-color:#fff;
+            border-radius:0 0 5px 5px;
+            padding: 20px;
+        }
+        
+        .util-clearfix {
+            zoom: 1;
+        }
+        .util-clearfix:after {
+            visibility: hidden;
+            display: block;
+            height: 0;
+            font-size: 0;
+            content: "\0020";
+            clear: both;
+        }
+        .line-limit-length, .two-line-clamp {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .line-limit-length {
+            white-space: nowrap;
+        }
+        
+        .product-evaluation{background-color:#fff;border-radius:5px;padding: 20px;}
+        .product-specs{background-color:#fff;border-radius:0 0 5px 5px}
+        .product-specs .product-specs-list{padding:20px}
+        .product-specs .product-prop{display:inline-block;max-width:50%}
+        .product-specs .product-specs-list li{position:relative;width:50%;float:left;line-height:28px;list-style:none;margin-left:0}
+        .product-specs .property-title{color:#999;font-size:14px}
+        .product-specs .property-desc{cursor:pointer;display:inline-block;max-width:inherit;font-size:14px;color:#151515;vertical-align:bottom}
+        
+        </style>
+</head>
+<body>
+    <div class="product-detail" id="product-detail">
+        <div class="product-detail-tab">
+            <div class="detail-extend-tab">
+                <div class="detail-tab-bar">
+                    <ul class="tab-lists avoid-user-select">
+                        <li class="tab-item active" onclick="openCity(event,'presentation')">
+                            <div class="tab-inner">
+                                <span class="tab-inner-text" >PRÉSENTATION</span>
+                            </div>
+                        </li>
+                        <li class="tab-item" onclick="openCity(event,'avis')">
+                            <div class="tab-inner"><span class="tab-inner-text">AVIS <span class="fdbc-num">&nbsp;(1754)&lrm;</span></span>
+                            </div>
+                        </li>
+                        <li class="tab-item" onclick="openCity(event,'details')">
+                            <div class="tab-inner">
+                                <span class="tab-inner-text">DÉTAILS</span>
+                            </div>
+                        </li>
+                        <li class="tab-item report-item" style="display: block;">
+                            <div class="tab-inner report-item">
+                                <span class="tab-inner-text">
+                                    <a href="" target="_blank">Signaler cet article</a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-content-detail" id="presentation" style="display: block;">
+                        <div class="product-overview">
+                            <div className='long-description'>
+                                <div className='wrapper'>
+                                    <div className='long-describe'>
+                                        <h4>Description :</h4>
+                                        <p>sèche linge effet rotin de Sofpince Capacité de 20m qui
+                                            vous offre un grand espace de séchage.
+                                            Dimensions ouvert ( L x P x H) : 180 x 52.5 x 109 cm ,
+                                            Dimensions fermé ( L x P x H ) : 55x10x126cm ,
+                                            Pratique à utiliser et a déplacer facilement même avec
+                                            du linge dessus . Matière : plastique , rotin , ainsi
+                                            Idéal pour l'extérieur . L'étendoir comporte 3 étendoirs
+                                            dont un d'une plus grande capacité pour les plus grand
+                                            vêtement .
+                                            Il offre une grande capacité de séchage tout en entrant
+                                            dans un minimum d'espace .
+                                            Le meuble est modulable selon les envies et les vêtements
+                                            à sécher . Une fois tout le linge sec ,
+                                            il se range facilement et il est peu encombrant .
+                                            Sa structure est légère en pvc mais conserve un bon
+                                            maintien même plié . La notice d'utilisation est livré
+                                            avec l'accessoire .</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content-detail" id="avis" style="display: none;">
+                        <div class="product-evaluation" id="product-evaluation">
+                            <span>product-evaluation</span>
+                            <span>product-evaluation</span>
+                            <span>product-evaluation</span>
+                            <span>product-evaluation</span>
+                            <span>product-evaluation</span>
+                            <span>product-evaluation</span>
+                            <span>product-evaluation</span>
+                        </div>
+                    </div>
+                    <div class="tab-content-detail" id="details" style="display: none;">
+                        <div class="product-specs">
+                            <ul class="product-specs-list util-clearfix">
+                                <li class="product-prop line-limit-length"><span class="property-title">Nom de
+                                        marque:&nbsp;</span><span class="property-desc line-limit-length"
+                                        title="Reup">Reup</span></li>
+                                <li class="product-prop line-limit-length"><span
+                                        class="property-title">Capacité:&nbsp;</span><span
+                                        class="property-desc line-limit-length" title="300ml">300ml</span></li>
+                                <li class="product-prop line-limit-length"><span class="property-title">Feature
+                                        27:&nbsp;</span><span class="property-desc line-limit-length" title="h2o humidifier">h2o
+                                        humidifier</span></li>
+                                <li class="product-prop line-limit-length"><span class="property-title">Feature
+                                        28:&nbsp;</span><span class="property-desc line-limit-length"
+                                        title="car humidifier air purifier">car humidifier air purifier</span></li>
+                                <li class="product-prop line-limit-length"><span class="property-title">Feature
+                                        29:&nbsp;</span><span class="property-desc line-limit-length"
+                                        title="air humidifier for home">air humidifier for home</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, id) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("tab-content-detail");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-item");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(id).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

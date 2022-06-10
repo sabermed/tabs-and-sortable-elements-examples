@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            height: 300px;
+            width: 500px;
+        }
+        
+        .tabs label {
+            order: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 2rem;
+            margin-right: 0.2rem;
+            cursor: pointer;
+            background-color: pink;
+            font-weight: bold;
+            transition: background ease 0.3s;
+        }
+        
+        .tabs .tab {
+            order: 9;
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            display: none;
+            padding: 1rem;
+            background: #fff;
+            padding: 20px;
+        }
+        
+        .tabs input[type="radio"] {
+            display: none;
+        }
+        
+        .tabs input[type="radio"]:checked + label {
+            background: #fff;
+        }
+        
+        .tabs input[type="radio"]:checked + label + .tab {
+            display: block;
+        }
+        
+        @media (max-width: 465px) {
+            .tabs .tab,
+            .tabs label {
+                order: initial;
+            }
+            
+            .tabs label {
+                width: 100%;
+                margin-left: 50px;
+            }
+        }
+        
+        body {
+            min-height: 100vh;
+            box-sizing: border-box;
+            padding-top: 10vh;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 60rem;
+            margin: 0 auto;
+            font-size: 110%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+    
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone">First Tab</label>
+        <div class="tab">
+            <h1>First Tab Content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    
+        <input type="radio" name="tabs" id="tabtwo">
+        <label for="tabtwo">Second Tab</label>
+        <div class="tab">
+            <h1>Second Tab Content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+    
+        <input type="radio" name="tabs" id="tabthree">
+        <label for="tabthree">Third Tab</label>
+        <div class="tab">
+            <h1>Third tab content</h1>
+            <p>hfioezhogehzioghz</p>
+        </div>
+    </div>
+</body>
+</html>
